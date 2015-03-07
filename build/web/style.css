@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-Mar-2015, 14:20:06
+    Author     : Cathal
+*/
+.btn {
+    margin-bottom: 4px;
+}
+
+.navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
+    width: 350px;
+}
+
+.tt-dropdown-menu {
+    z-index: 9999;
+}
+
+.typeahead { z-index: 9999; }

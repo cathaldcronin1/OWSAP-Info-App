@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Risk 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Risk 1: A1-Injections</h1>
+                <p class="lead"></p>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>General Description</b></h3>
+                </div>
+                <div class="panel-body">
+                    Injection flaws, such as SQL, OS, and LDAP injection occur when
+                    untrusted data is sent to an interpreter as part of a command or query.
+                    The attacker’s hostile data can trick the interpreter into executing 
+                    unintended commands or accessing data without proper authorization.
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Impact of Injection Attacks</b></h3>
+                </div>
+                <h2 class="panel-title">
+                    <div id="collapse-764" class="panel-collapse collapse in" style="height: auto;">
+                        <div class="panel-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2 class="panel-title">
+                                        <a href="#collapse-765" data-parent="#collapsible-764" class="accordion-toggle" data-toggle="collapse">Technical Impacts</a>
+                                    </h2>
+                                </div>
+                                <div id="collapse-765" class="panel-collapse collapse in" style="height: auto;">
+                                    <div class="panel-body">
+                                        <p>Injection can result in data loss or corruption, lack of accountability, or denial of access. Injection can sometimes lead to complete host takeover.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h2 class="panel-title">
+                                        <a href="#collapse-766" data-parent="#collapsible-764" class="accordion-toggle" data-toggle="collapse">Business Impacts</a>
+                                    </h2>
+                                </div>
+                                <div id="collapse-766" class="panel-collapse collapse in" style="height: auto;">
+                                    <div class="panel-body">
+                                        <p>Consider the business value of the affected data and the platform running the interpreter. All data could be stolen, modified, or deleted. Could your reputation be harmed?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Typical Attack Scenario</b></h3>
+                </div>
+                <div class="panel-body">
+                    Attacker sends simple text-based attacks that exploit the syntax of the targeted interpreter. Almost any source of data can be an injection vector, including internal sources. Injection flaws occur when an application sends untrusted data to an interpreter. Injection flaws are very prevalent, particularly in legacy code. They are often found in SQL, LDAP, Xpath, or NoSQL queries; OS commands; XML parsers, SMTP Headers, program arguments, etc. Injection flaws are easy to discover when examining code, but frequently hard to discover via testing. Scanners and fuzzers can help attackers find injection flaws.
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>How to avoid this weakness/risk</b></h3>
+                </div>
+                <div class="panel-body">
+                    <td style="vertical-align: top; padding:5px; width: 50%; border: 3px solid #4d953d; background-color: #F8FFF8;">
+                        <div style="font-style: bold; color: #000000; border-bottom: #999999 solid 1px; margin-bottom: 3px; padding-bottom: 3px;; font-size: 150%;">
+                            How Do I Prevent 'Injection'?</div> 
+                        <p>Preventing injection requires keeping untrusted data separate from commands and queries.
+                        </p>
+                        <ol>
+                            <li> The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface.  Be careful with APIs, such as stored procedures, that are parameterized, but can still introduce injection under the hood.
+                            </li>
+                            <li> If a parameterized API is not available, you should carefully escape special characters using the specific escape syntax for that interpreter. <a rel="nofollow" class="external text" href="https://www.owasp.org/index.php/ESAPI">OWASP’s ESAPI</a> provides many of these <a rel="nofollow" class="external text" href="http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Encoder.html">escaping routines</a>.
+                            </li>
+                            <li> Positive or “white list” input validation is also recommended, but is not a complete defense as many applications require special characters in their input. If special characters are required, only approaches 1. and 2. above will make their use safe. <a rel="nofollow" class="external text" href="https://www.owasp.org/index.php/ESAPI">OWASP’s ESAPI</a> has an extensible library of <a rel="nofollow" class="external text" href="http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Validator.html">white list input validation routines</a>. 
+                            </li>
+                        </ol>
+                    </td>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Further Information</b></h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li> <a rel="nofollow" class="external text" href="http://cwe.mitre.org/data/definitions/77.html">CWE Entry 77 on Command Injection</a>
+                        </li>
+                        <li> <a rel="nofollow" class="external text" href="http://cwe.mitre.org/data/definitions/89.html">CWE Entry 89 on SQL Injection</a>
+                        </li>
+                        <li> <a rel="nofollow" class="external text" href="http://cwe.mitre.org/data/definitions/564.html">CWE Entry 564 on Hibernate Injection</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
