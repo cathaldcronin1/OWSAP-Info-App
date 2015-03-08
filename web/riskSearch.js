@@ -1,7 +1,15 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*
+ *
+ * This funcion is to match and display the risks defined below. As the user
+ * types all relevant matches appear and the characters the user has entered
+ * appear highlighted in bold in the result.
+ *
+ *   Document   : A1.jsp
+ *   Date: 08/03/2015
+ *   Author     : Cathal Cronin
+ *   ID: 10131531
+ *   Version: 1.0
+ *
  */
 var substringMatcher = function (strs) {
     return function findMatches(q, cb) {

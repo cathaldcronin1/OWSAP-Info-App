@@ -21,15 +21,6 @@
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A5.jsp</file>
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/typeahead.js</file>
         </group>
-        <group name="Web App Design">
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/GetRisk1Servlet.java</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/searchRiskServlet.java</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/selectRiskServlet.java</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A1.jsp</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/index.jsp</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A2.jsp</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A4.jsp</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/resources.html</file>
-        </group>
+        <group name="Web App Design"/>
     </open-files>
 </project-private>

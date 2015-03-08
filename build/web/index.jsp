@@ -1,18 +1,14 @@
 <%--
-    Document   : index
-    Created on : 05-Mar-2015, 22:32:51
-    Author     : Cathal
+    Document   : index.jsp
+    Date: 08/03/2015
+    Author     : Cathal Cronin
+    ID: 10131531
+    Version: 1.0
 --%>
-
 <%@page import="java.lang.NumberFormatException"%>
 <%@ page contentType="text/html" pageEncoding="UTF-8" isThreadSafe="true" %>
 <%@ page errorPage="errorPage.jsp" %>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>OWASP Information App</title>
@@ -57,23 +53,26 @@ and open the template in the editor.
         %>
 
         <%
+            // Get what the user has searched for
             String risk = request.getParameter("searchRisk");
-            System.out.println("The risk is: " + risk);
 
-            // if risk is not null and doesn't contain a number
+            // if risk is not null
             if (risk != null)
             {
+                // check if it contains a number
                 if (risk.matches(".*\\d.*"))
                 {
+                    // throw error if so
                     throw new NumberFormatException();
                 }
                 else
                 {
-                    // now check to see if what was entered is on of the risks
+                    // now check to see if what was entered is one of the risks
                     for (String str : risks)
                     {
                         if (str.trim().compareToIgnoreCase(risk) == 0)
                         {
+                            // Forward what the user has searched to the searchRiskServlet
                             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/searchRiskServlet");
                             dispatcher.forward(request, response);
 
@@ -266,7 +265,7 @@ and open the template in the editor.
             </div>
         </div>
         <script src="typeahead.js"></script>
-        <script src="the-basics.js"></script>
+        <script src="riskSearch.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </body>
 </html>

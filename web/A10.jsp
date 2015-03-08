@@ -1,19 +1,29 @@
 <%--
-    Document   : A1
-    Created on : Mar 1, 2015, 1:58:28 PM
-    Author     : cathal
+    Document   : A10.jsp
+    Date: 08/03/2015
+    Author     : Cathal Cronin
+    ID: 10131531
+    Version: 1.0
 --%>
-
+<%@page import="java.io.IOException"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Risk 10</title>
-        <%
-            RequestDispatcher hd = request.getRequestDispatcher("resources.html");
-            hd.include(request, response);
+        <%-- JSP Method Declaration to retireve  external resources --%>
+        <%!
+            public String getResources(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+            {
+                String added = "";
+                RequestDispatcher hd = request.getRequestDispatcher("resources.html");
+                hd.include(request, response);
+                return added;
+            }
         %>
+        <%-- JSP Expression to call my getResources function that I declared --%>
+        <%= getResources(request, response)%>
     </head>
     <body>
         <div class="container">

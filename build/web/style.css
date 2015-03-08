@@ -1,12 +1,12 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    Document   : A1.jsp
+    Date: 08/03/2015
+    Author     : Cathal Cronin
+    ID: 10131531
+    Version: 1.0
 */
-/*
-    Created on : 05-Mar-2015, 14:20:06
-    Author     : Cathal
-*/
+
+// Some minor adjustments to the CSS search box button and search bar width
 .btn {
     margin-bottom: 4px;
 }

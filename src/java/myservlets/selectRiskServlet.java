@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package myservlets;
 
 import java.io.IOException;
@@ -15,73 +11,66 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author reiner.dojen
+ * @author Cathal.Cronin
  */
 public class selectRiskServlet extends HttpServlet
 {
 
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        // Create cookie to store last selected risk
-        Cookie last_risk = new Cookie("risk", request.getParameter("risks"));
+        // Get all cookies
+        Cookie[] cookie_jar = request.getCookies();
+        boolean found = false;
 
-        // set expirary time to 24 hours
-        last_risk.setMaxAge(60 * 60 * 24);
+        // Check if there is cookies set
+        if (cookie_jar != null)
+        {
+            // go through each cookie until we find the risk cookie
+            for (Cookie cookie : cookie_jar)
+            {
+                if (cookie.getName().equals("risk"))
+                {
+                    // Update risk cookie to what user last selected
+                    cookie.setValue(request.getParameter("risks"));
+                    // Add risk cookie to response headers
+                    response.addCookie(cookie);
+                    found = true;
+                }
+            }
+            // If we don't find the risk cookie, create it
+            if (!found)
+            {
+                System.out.println("creating new Cookie");
+                // Create cookie to store last selected risk
+                Cookie last_risk = new Cookie("risk", request.getParameter("risks"));
 
-        // Add risk cookie to response headers
-        response.addCookie(last_risk);
+                // set expirary time to 24 hours
+                last_risk.setMaxAge(60 * 60 * 24);
+
+                // Add risk cookie to response headers
+                response.addCookie(last_risk);
+            }
+
+        }
 
         // Set response content type
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
         String nextJSP = "/A" + request.getParameter("risks") + ".jsp";
+
+        // forward to the page the user has selected
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.forward(request, response);
-    }
-
-    public String getRisk(String risk_selection)
-    {
-        int risk = Integer.parseInt(risk_selection);
-        String riskString;
-        switch (risk)
-        {
-            case 1:
-                riskString = "Injections";
-                break;
-            case 2:
-                riskString = "Broken Authentication and Session Management";
-                break;
-            case 3:
-                riskString = "Cross-Site Scripting (XSS)";
-                break;
-            case 4:
-                riskString = "Insecure Direct Object References";
-                break;
-            case 5:
-                riskString = "Security Misconfiguration";
-                break;
-            case 6:
-                riskString = "Sensitive Data Exposure";
-                break;
-            case 7:
-                riskString = "Missing Function Level Access Control";
-                break;
-            case 8:
-                riskString = "Cross-Site Request Forgery (CSRF)";
-                break;
-            case 9:
-                riskString = "Using Components with Known Vulnerabilities";
-                break;
-            case 10:
-                riskString = "Unvalidated Redirects and Forwards";
-                break;
-            default:
-                riskString = "Invalid Selection";
-        }
-        return riskString;
-
     }
 }

@@ -1,7 +1,9 @@
 <%--
-    Document   : errorPage
-    Created on : Mar 7, 2015, 6:56:14 PM
-    Author     : cathal
+    Document   : errorPage.jsp
+    Date: 08/03/2015
+    Author     : Cathal Cronin
+    ID: 10131531
+    Version: 1.0
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -18,6 +20,7 @@
             <%= exception.toString()%><br>
             </font>
         </h1>
+        <%-- Print out thr stack trace of the exception that has occured --%>
         <%
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);

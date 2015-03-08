@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    Author: Cathal Cronin
+    ID: 10131531
+    Version: 1.0
+    Date: 08/03/2015
 -->
 <html>
     <head>
@@ -26,7 +27,7 @@ and open the template in the editor.
                 <div class="panel-body">
                     Injection flaws, such as SQL, OS, and LDAP injection occur when
                     untrusted data is sent to an interpreter as part of a command or query.
-                    The attacker’s hostile data can trick the interpreter into executing 
+                    The attacker’s hostile data can trick the interpreter into executing
                     unintended commands or accessing data without proper authorization.
                 </div>
             </div>
@@ -82,7 +83,7 @@ and open the template in the editor.
                 <div class="panel-body">
                     <td style="vertical-align: top; padding:5px; width: 50%; border: 3px solid #4d953d; background-color: #F8FFF8;">
                         <div style="font-style: bold; color: #000000; border-bottom: #999999 solid 1px; margin-bottom: 3px; padding-bottom: 3px;; font-size: 150%;">
-                            How Do I Prevent 'Injection'?</div> 
+                            How Do I Prevent 'Injection'?</div>
                         <p>Preventing injection requires keeping untrusted data separate from commands and queries.
                         </p>
                         <ol>
@@ -90,7 +91,7 @@ and open the template in the editor.
                             </li>
                             <li> If a parameterized API is not available, you should carefully escape special characters using the specific escape syntax for that interpreter. <a rel="nofollow" class="external text" href="https://www.owasp.org/index.php/ESAPI">OWASP’s ESAPI</a> provides many of these <a rel="nofollow" class="external text" href="http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Encoder.html">escaping routines</a>.
                             </li>
-                            <li> Positive or “white list” input validation is also recommended, but is not a complete defense as many applications require special characters in their input. If special characters are required, only approaches 1. and 2. above will make their use safe. <a rel="nofollow" class="external text" href="https://www.owasp.org/index.php/ESAPI">OWASP’s ESAPI</a> has an extensible library of <a rel="nofollow" class="external text" href="http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Validator.html">white list input validation routines</a>. 
+                            <li> Positive or “white list” input validation is also recommended, but is not a complete defense as many applications require special characters in their input. If special characters are required, only approaches 1. and 2. above will make their use safe. <a rel="nofollow" class="external text" href="https://www.owasp.org/index.php/ESAPI">OWASP’s ESAPI</a> has an extensible library of <a rel="nofollow" class="external text" href="http://owasp-esapi-java.googlecode.com/svn/trunk_doc/latest/org/owasp/esapi/Validator.html">white list input validation routines</a>.
                             </li>
                         </ol>
                     </td>
