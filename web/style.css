@@ -7,10 +7,20 @@
 */
 
 // Some minor adjustments to the CSS search box button and search bar width
-.btn {
+/*.btn {
     margin-bottom: 4px;
-}
+}*/
 
 .navbar-form .input-group .input-group-addon, .navbar-form .input-group .input-group-btn, .navbar-form .input-group .form-control {
     width: 350px;
+}
+
+#searchbar
+{
+    width: 350px;
+}
+
+#searchbtn
+{
+    margin-bottom: 4px;
 }

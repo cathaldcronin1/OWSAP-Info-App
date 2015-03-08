@@ -90,7 +90,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div id="the-basics" class="input-group">
-                                        <input type="text" class="form-control typeahead" name ="searchRisk" placeholder="Search for a risk">
+                                        <input id="searchbar" type="text" class="form-control typeahead" name ="searchRisk" placeholder="Search for a risk">
                                         <span class="input-group-btn">
                                             <input id="searchbtn" class="btn btn-default" type="submit">Go!</button>
                                         </span>
