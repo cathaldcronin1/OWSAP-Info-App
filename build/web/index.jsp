@@ -235,6 +235,9 @@ and open the template in the editor.
                                 This feature is thanks to a library called typeahead.
 
                                 <a href="https://twitter.github.io/typeahead.js/">Library Used</a>
+                                <br><br>
+                                Also, if you type something that does not return any results.
+                                The page will not change, this is good and will display only legitimate searches.
                             </div>
                         </div>
                         <div class="panel panel-default">
@@ -262,10 +265,9 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-    </div>
-    <script src="typeahead.js"></script>
-    <script src="the-basics.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</body>
+        <script src="typeahead.js"></script>
+        <script src="the-basics.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </body>
 </html>
 

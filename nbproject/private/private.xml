@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="Web App Design">
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A2.jsp</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/selectWebPageServlet.java</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A1.html</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/index.html</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/selectRiskServlet.java</file>
-            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A1.jsp</file>
-        </group>
         <group>
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/style.css</file>
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A2.jsp</file>
@@ -28,6 +20,16 @@
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A5.jsp</file>
             <file>file:/C:/Users/Cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/typeahead.js</file>
+        </group>
+        <group name="Web App Design">
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/GetRisk1Servlet.java</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/searchRiskServlet.java</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/src/java/myservlets/selectRiskServlet.java</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A1.jsp</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/index.jsp</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A2.jsp</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/A4.jsp</file>
+            <file>file:/Users/cathal/Dropbox/Masters/Semester%202/EE6052%20-%20Web-based%20Application%20%20Design/OWASPInfoApp/web/resources.html</file>
         </group>
     </open-files>
 </project-private>
