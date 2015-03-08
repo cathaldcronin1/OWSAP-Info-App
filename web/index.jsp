@@ -83,7 +83,7 @@
         %>
         <div class="container">
             <div class="navbar" role="navigation">
-                <a class="navbar-brand" href="/OWASPInfoApp">OWASP Information App</a>
+                <a class="navbar-brand" href="">OWASP Information App</a>
                 <div class="navbar-inner">
                     <div class="navbar-header pull-right">
                         <form class="navbar-form inline" action="" method="POST" role="search">
@@ -143,14 +143,14 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">GET Servlet</th>
-                                    <td>GetRisk1Servlet.java - Line 22</td>
+                                    <td>GetRisk1Servlet.java - Line 26</td>
                                 <tr>
                                     <th scope="row">POST Servlet</th>
-                                    <td>selectRiskServlet.java - Line 22</td>
+                                    <td>selectRiskServlet.java - Line 28</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">POST Servlet</th>
-                                    <td>searchRiskServlet.java - Line 22</td>
+                                    <td>searchRiskServlet.java - Line 27</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">JSP Page</th>
@@ -158,20 +158,20 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">JSP Error Page</th>
-                                    <td>errorPage.jsp - Included in all jsp pages. (Line 9 of index.jsp)</td>
+                                    <td>errorPage.jsp - Included in all jsp pages. (Line 10 of index.jsp)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">How to Cause an Error</th>
                                     <td>Enter a Number into the SearchBox, creates error page for entering a number
-                                        Lines 60-104 in index.jsp</td>
+                                        Lines 55-103 in index.jsp</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">JSP Declaration Element</th>
-                                    <td>index.jsp - Line 43, index.jsp - Line 60-84</td>
+                                    <td>index.jsp - Line 39, index.jsp - Line 55-83</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">JSP Expression Element</th>
-                                    <td>A2.jsp - Line 23 - Used To Include CSS Libraries</td>
+                                    <td>A2.jsp - Line 28 - Used To Include CSS Libraries</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -237,6 +237,9 @@
                                 <br><br>
                                 Also, if you type something that does not return any results.
                                 The page will not change, this is good and will display only legitimate searches.
+
+                                <br><br>
+                                Searching for a risk will <b>NOT</b> update or set the cookie. Only using the dropdown selection will.
                             </div>
                         </div>
                         <div class="panel panel-default">
