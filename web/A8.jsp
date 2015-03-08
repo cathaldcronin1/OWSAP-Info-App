@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page errorPage="errorPage.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +19,7 @@
     <body>
         <div class="container">
             <div class="page-header">
-                <h1>Risk 2: A8-Cross-Site Request Forgery (CSRF)</h1>
+                <h1>Risk 8: A8-Cross-Site Request Forgery (CSRF)</h1>
                 <p class="lead"></p>
             </div>
             <div class="panel panel-default">

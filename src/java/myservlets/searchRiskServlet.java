@@ -5,6 +5,8 @@
 package myservlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,83 +23,54 @@ public class searchRiskServlet extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
+        // Set response content type
+        response.setContentType("text/html");
+
+        PrintWriter out = response.getWriter();
         // Get what the user searched for
         String riskSearch = request.getParameter("searchRisk");
 
-        System.out.println("-------------------------------------");
-        System.out.println("risk string: " + riskSearch);
-        System.out.println("-------------------------------------");
+        // Get the corresponding info page for the searched risk.
+        // forward to that page.
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(getRisk(riskSearch));
+        dispatcher.forward(request, response);
 
-        // if the search string is a number
-        // We treat this as an error, display the error page.
-        if (isNumeric(riskSearch))
-        {
-
-        }
-        else
-        {
-
-        }
-        // take what user entered, validate it.
-        // if it is a number
-        // take user to error page jsp
-        // otherwise
-        //  // try match what they entered to a page and send to corresponding jsp
-        // if no match then display the index.html page.
-
-        {
-
-        }
     }
 
-    public static boolean isNumeric(String str)
+    public String getRisk(String risk)
     {
-        try
-        {
-            Double num = Double.parseDouble(str);
-        }
-        catch (NumberFormatException nfe)
-        {
-            return false;
-        }
-        return true;
-    }
-
-    public String getRisk(String risk_selection)
-    {
-        int risk = Integer.parseInt(risk_selection);
         String riskString;
         switch (risk)
         {
-            case 1:
-                riskString = "A1-Injection";
+            case "Injections":
+                riskString = "/A1.jsp";
                 break;
-            case 2:
-                riskString = "A2-Broken Authentication and Session Management";
+            case "Broken Authentication and Session Management":
+                riskString = "/A2.jsp";
                 break;
-            case 3:
-                riskString = "A3-Cross-Site Scripting (XSS)";
+            case "Cross-Site Scripting (XSS)":
+                riskString = "/A3.jsp";
                 break;
-            case 4:
-                riskString = "A4-Insecure Direct Object References";
+            case "Insecure Direct Object References":
+                riskString = "/A4.jsp";
                 break;
-            case 5:
-                riskString = "A5-Security Misconfiguration";
+            case "Security Misconfiguration":
+                riskString = "/A5.jsp";
                 break;
-            case 6:
-                riskString = "A6-Sensitive Data Exposure";
+            case "Sensitive Data Exposure":
+                riskString = "/A6.jsp";
                 break;
-            case 7:
-                riskString = "A7-Missing Function Level Access Control";
+            case "Missing Function Level Access Control":
+                riskString = "/A7.jsp";
                 break;
-            case 8:
-                riskString = "A8-Cross-Site Request Forgery (CSRF)";
+            case "Cross-Site Request Forgery (CSRF)":
+                riskString = "/A8.jsp";
                 break;
-            case 9:
-                riskString = "A9-Using Components with Known Vulnerabilities";
+            case "Using Components with Known Vulnerabilities":
+                riskString = "/A9.jsp";
                 break;
-            case 10:
-                riskString = "A10-Unvalidated Redirects and Forwards";
+            case "Unvalidated Redirects and Forwards":
+                riskString = "/A10.jsp";
                 break;
             default:
                 riskString = "Invalid Selection";

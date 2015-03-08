@@ -37,18 +37,6 @@ public class selectRiskServlet extends HttpServlet
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>OWASP Top 10 Risks</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<table>");
-        out.println("<tr><td>Risk: </td><td>");
-        out.println(getRisk(request.getParameter("risks")) + "</td></tr>");
-        out.println("</td></tr></table>");
-        out.println("</body>");
-        out.println("</html>");
-
         String nextJSP = "/A" + request.getParameter("risks") + ".jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.forward(request, response);
@@ -61,34 +49,34 @@ public class selectRiskServlet extends HttpServlet
         switch (risk)
         {
             case 1:
-                riskString = "A1-Injection";
+                riskString = "Injections";
                 break;
             case 2:
-                riskString = "A2-Broken Authentication and Session Management";
+                riskString = "Broken Authentication and Session Management";
                 break;
             case 3:
-                riskString = "A3-Cross-Site Scripting (XSS)";
+                riskString = "Cross-Site Scripting (XSS)";
                 break;
             case 4:
-                riskString = "A4-Insecure Direct Object References";
+                riskString = "Insecure Direct Object References";
                 break;
             case 5:
-                riskString = "A5-Security Misconfiguration";
+                riskString = "Security Misconfiguration";
                 break;
             case 6:
-                riskString = "A6-Sensitive Data Exposure";
+                riskString = "Sensitive Data Exposure";
                 break;
             case 7:
-                riskString = "A7-Missing Function Level Access Control";
+                riskString = "Missing Function Level Access Control";
                 break;
             case 8:
-                riskString = "A8-Cross-Site Request Forgery (CSRF)";
+                riskString = "Cross-Site Request Forgery (CSRF)";
                 break;
             case 9:
-                riskString = "A9-Using Components with Known Vulnerabilities";
+                riskString = "Using Components with Known Vulnerabilities";
                 break;
             case 10:
-                riskString = "A10-Unvalidated Redirects and Forwards";
+                riskString = "Unvalidated Redirects and Forwards";
                 break;
             default:
                 riskString = "Invalid Selection";
