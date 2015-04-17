@@ -1,13 +1,14 @@
 # OWSAP-Info-App
 Information Application for OWASP
 
-The goal of this project was to develop a Java information web application using the following:
+The goal of this project was to develop a Java information web application. For my application it was completed using the following:
  * Servlets.
  * JSP Pages.
  * JSP Error Handling.
  * JSP Declaration Elements
  * JSP Expression Elements
  * Cookies.
+ * Searching Functionality.
  * Styled with Twitter Bootstrap.
 
 
@@ -21,11 +22,11 @@ The goal of this project was to develop a Java information web application using
  *Output*
  ===
  
- **Main Page Overview with Risk 1 Selected**
+ **Main Page Overview - Risk 1 Selected**
  =
  ![alt tag](http://i.imgur.com/bCrKNmH.jpg)
  
-**JSP Page with Information about Risk 1**
+**JSP Page - Information For Risk 1**
 =
 ![alt tag](http://i.imgur.com/2bANsu8.jpg)
  
